@@ -4,6 +4,7 @@
 
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(http://fonts.googleapis.com/css?family=Maven+Pro:400,500);
+@import url(http://fonts.googleapis.com/css?family=Share+Tech+Mono);
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
@@ -110,4 +111,13 @@ body {
 }
 .strap-yes {
     color: green;
+}
+
+.debugConsole {
+    font-family: 'Share Tech Mono';
+    height: 250px;
+    overflow-y: auto;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
