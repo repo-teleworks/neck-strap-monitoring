@@ -108,11 +108,12 @@ function setDecorationMemberLocation(srcNode){
 
 function setDecorationLastUpdate(lastUpdated) {
     var lastUpdatedDeco = new Date(lastUpdated);
-    var currntTime = new Date();
+    var currentTime = new Date().getTime();
+    var currentTime = currentTime + 32400000;
     var warningLevel = '<span style="color:black;">';
-    if (currntTime-lastUpdatedDeco > 30 * 1000) {
+    if (currentTime-lastUpdatedDeco > 30 * 1000) {
         warningLevel = '<span style="color:red;">';
-    } else if (currntTime-lastUpdatedDeco > 15 * 1000) {
+    } else if (currentTime-lastUpdatedDeco > 15 * 1000) {
         warningLevel = '<span style="color:darkred;">';
     }
 
@@ -123,9 +124,9 @@ function setDecorationLastUpdate(lastUpdated) {
 }
 
 function setDecorationNeckStrap(neckStrap) {
-    if (neckStrap == '01') {
+    if (neckStrap == '00') {
         return '<span class="glyphicon glyphicon-ok strap-yes"></span>'
-    } else if (neckStrap == '00'){
+    } else if (neckStrap == '01'){
         return '<span class="glyphicon glyphicon-remove strap-no"></span>'
     } else {
         return '<span class="glyphicon glyphicon-question-sign strap-no"></span>'
