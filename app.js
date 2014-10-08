@@ -57,7 +57,7 @@ socket.sockets.on('connection', function(socket){
             }
         }
     });
-    socket.on('monitoring', function(data){
+    socket.on('monitoring', function(data) {
         if(data.type == 'command'){
             socket.emit('monitoring', {type: 'command', data: 'ACK'});
             console.log('monitoring client is connected.');

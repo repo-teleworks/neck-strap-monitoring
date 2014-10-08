@@ -2,7 +2,7 @@
  * 안전모 jQuery / Ajax script for client browser
  */
 
-var serverUrl = ':8080';
+var serverUrl = document.URL;
 var socket = io.connect(serverUrl);
 
 var memberList = [];
